@@ -1,0 +1,30 @@
+<html>
+<body>
+<h2>Warning about calling java.net.Url#hashCode()</h2>
+<p>If you are using Java and working with URLs, you may come across the method <code>java.net.Url#hashCode()</code>.
+  It is important to note that calling this method can lead to unexpected behavior and performance
+  problems.</p>
+<h2>Why is calling Url#hashCode() a problem?</h2>
+<p>The problem with calling <code>Url#hashCode()</code> is that it tries to resolve the host of the
+  URL in order to compute its hash code. This can be a time-consuming operation, especially if the
+  host is not immediately available or if there are issues with the network connection. Therefore,
+  calling this method can potentially lead to performance problems.</p>
+
+<h2>How to avoid problems with Url#hashCode()</h2>
+<p>If you need to use hash codes with URL objects, it is recommended to use a custom hash code
+  implementation that does not rely on resolving the host. This can be done by using a hash code
+  algorithm that only takes into account the URL's string representation, such as the widely used
+  "Jenkins hash".</p>
+<p>If you are using a HashMap or HashSet that contains URL objects, you can create a custom
+  implementation of the <code>Map</code> or <code>Set</code> interface that uses a custom hash code
+  function to avoid calling <code>Url#hashCode()</code>.</p>
+<p>Finally, if you have a custom class that has a URL instance variable, you can override the <code>hashCode()</code>
+  method to use a custom hash code implementation that avoids calling <code>Url#hashCode()</code>.
+</p>
+
+<h2>Conclusion</h2>
+<p>Calling <code>Url#hashCode()</code> can lead to unexpected behavior and performance problems, and
+  should be avoided. If you need to use hash codes with URL objects, it is recommended to use a
+  custom hash code implementation that does not rely on resolving the host.</p>
+</body>
+</html>

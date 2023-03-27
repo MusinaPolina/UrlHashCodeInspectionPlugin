@@ -5,14 +5,19 @@
     <vendor>musinapolina</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.InspectionBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.musinapolina.urlhashcodeinspectionplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+       <localInspection language="JAVA"
+          bundle="messages.InspectionBundle"
+          key="inspection.url.hashcode.display.name"
+          groupPath="Java"
+          groupBundle="messages.InspectionsBundle"
+          groupKey="group.names.probable.bugs"
+          enabledByDefault="true"
+          level="WARNING"
+          implementationClass="com.github.musinapolina.urlhashcodeinspectionplugin.UrlHashCodeInspection"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.musinapolina.urlhashcodeinspectionplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
 </idea-plugin>

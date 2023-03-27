@@ -40,7 +40,15 @@ intellij {
 
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) })
+    plugins.set(listOf("com.intellij.java"))
 }
+
+/*
+dependencies {
+    implementation("com.github.adedayo.intellij.sdk:platform-impl:142.1")
+    testImplementation("junit:junit:4.13.2")
+}
+*/
 
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
 changelog {
