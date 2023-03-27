@@ -1,8 +1,5 @@
 # Url#hashCode Inspection Plugin
 
-![Build](https://github.com/MusinaPolina/UrlHashCodeInspectionPlugin/workflows/Build/badge.svg)
-
-
 <!-- Plugin description -->
 This IntelliJ inspection plugin helps to identify the usage of the java.net.Url#hashCode() method in
 Java code. It warns about the potential performance problems that may occur when this method is
