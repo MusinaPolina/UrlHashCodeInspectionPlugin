@@ -1,4 +1,4 @@
-# UrlHashCodeInspectionPlugin
+# Url#HashCode Inspection Plugin
 
 ![Build](https://github.com/MusinaPolina/UrlHashCodeInspectionPlugin/workflows/Build/badge.svg)
 
